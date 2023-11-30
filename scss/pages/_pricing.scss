@@ -1,0 +1,121 @@
+.pricing {
+    padding-top: calc(var(--header-height) + 40px);
+    padding-bottom: 225px;
+
+    .textbox {
+        &:first-child {
+            max-width: 660px;
+            padding: 0 46px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .des {
+            max-width: initial;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 37px;
+
+        .block-item {
+            background-color: initial;
+            padding: initial;
+
+            &__content {
+                display: flex;
+                align-items: center;
+
+                .textbox {
+                    margin-left: 24px;
+
+                    .des {
+                        margin-top: initial;
+                        margin-bottom: initial;
+                    }
+                }
+            }
+        }
+    }
+
+    &__options {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--grid-gap);
+        margin-top: 56px;
+
+        &-choice {
+            border-radius: 40px;
+            background-color: var(--darkBlue-cl);
+            padding: 48px 30px 42px 32px;
+
+            .tag {
+                width: fit-content;
+                margin-bottom: 13px;
+            }
+
+            .features {
+                span {
+                    font-family: dsb;
+                    line-height: var(--label-lh);
+                    letter-spacing: var(--label-ls);
+                    display: block;
+                    margin-bottom: 14px;
+                }
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+
+                    &:not(:last-child) {
+                        margin-bottom: 6px;
+                    }
+
+
+
+                    p {
+                        line-height: 20px;
+                    }
+                }
+            }
+
+            .reg-btn {
+                margin-top: 54px;
+
+                &:hover {
+                    background-color: var(--white-cl);
+                    color: var(--blue-cl);
+                }
+            }
+        }
+    }
+
+    @include sm {
+        padding-bottom: 80px;
+
+        .textbox {
+            &:first-child {
+                max-width: 370px;
+                padding: initial;
+                text-align: initial;
+                margin: initial;
+            }
+
+            .des {
+                max-width: initial;
+            }
+        }
+
+        .pricing__icons {
+            flex-direction: column;
+            gap: 38px;
+        }
+
+        .pricing__options {
+            grid-template-columns: 1fr;
+        }
+    }
+}

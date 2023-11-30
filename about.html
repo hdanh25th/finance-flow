@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>financeFlow</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- Facebook -->
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <!-- Twitter -->
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:card" content="">
+    <meta name="twitter:site" content="">
+    <link rel="canonical" href="https://cfdcircle.vn" />
+    <!-- Favicon -->
+    <link rel="icon" href="./img/favicon.ico">
+
+    <link rel="stylesheet" href="./dest/style.min.css">
+    <link rel="stylesheet" href="./dest/fonts.css">
+
+    <style>
+        .loading {
+            z-index: 9999;
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--bg-cl);
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loading .loading__bars {
+            width: 160px;
+            height: 4px;
+            position: relative;
+            background-color: var(--blue-cl);
+            margin-bottom: 15px;
+        }
+
+        .loading .loading__bars div {
+            position: absolute;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: var(--white-cl);
+        }
+
+        .loading .loading__percentage {
+            color: var(--white-cl);
+            font-size: var(--btn-text);
+            line-height: var(--btn-lh);
+            letter-spacing: var(--btn-ls);
+            position: relative;
+        }
+
+        .loading.completed {
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+            -webkit-transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body class="disable-scroll">
+    <ul class="mobile-menu">
+        <li>
+            <a href="./" class="active" id="index">HOME</a>
+        </li>
+
+        <li>
+            <a href="./about.html" id="about">ABOUT</a>
+        </li>
+
+        <li>
+            <a href="./pricing.html" id="pricing">PRICING</a>
+        </li>
+
+        <li>
+            <a href="./tokens.html" id="tokens">TOKENS</a>
+        </li>
+
+        <li>
+            <a href="./blog.html" id="blog">BLOG</a>
+        </li>
+
+        <li>
+            <a href="./contact.html" id="contact">CONTACT US</a>
+        </li>
+        <a href="#" class="reg-btn mobile">DOWNLOAD APP</a>
+        <div class="blur">
+            <img src="./img/icon-blurM.svg" alt="">
+        </div>
+    </ul>
+
+    <div class="loading">
+        <div class="loading__bars">
+            <div></div>
+        </div>
+        <div class="loading__percentage">0%</div>
+    </div>
+
+    <div class="progress"></div>
+
+    <header class="header">
+
+        <div class="container">
+            <div class="header__left">
+                <a href="./index.html" class="header__logo">
+                    <img src="./img/icon-logo.svg" alt="financeFlow">
+                </a>
+                <a href="./index.html" class="header__logo hidden">
+                    <img src="./img/icon-logoM.svg" alt="financeFlow">
+                </a>
+                <ul class="header__menu">
+                    <li>
+                        <a href="./index.html" class="active" id="index">HOME</a>
+                    </li>
+                    <li>
+                        <a href="./about.html" id="about">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="./pricing.html" id="pricing">PRICING</a>
+                    </li>
+                    <li>
+                        <a href="./tokens.html" id="tokens">TOKEN</a>
+                    </li>
+                    <li>
+                        <a href="./blog.html" id="blog">BLOG</a>
+                    </li>
+                    <li>
+                        <a href="./contact.html" id="contact">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+
+            <a href="https://cfdcircle.vn/" target="_blank" class="header__btn">DOWNLOAD APP</a>
+
+            <div class="header__hambur">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <main class="aboutpage">
+        <section class="about fade">
+            <div class="container">
+                <div class="textbox">
+                    <h1 class="heading">About Finance Flow</h1>
+                    <p class="des">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Feugiat nulla suspendisse tortor aenean dis placerat.
+                        Scelerisque imperdiet vitae dolor non aliquam. Malesuada.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="question fade">
+            <div class="container">
+                <div class="textbox row">
+                    <h2 class="heading lv2">What drives Finance Flow?</h2>
+                    <p class="des">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Feugiat nulla suspendisse tortor aene.
+                    </p>
+                </div>
+
+                <div class="question__wrapper">
+                    <div class="block-item">
+                        <div class="block-item__content">
+                            <img src="./img/icon-people.svg" alt="financeFlow">
+                            <div class="textbox">
+                                <h2 class="heading label">OPEN SOURCE</h2>
+                                <p class="des lv2">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Et nibh urna in proin dui purus bibendum cras. Morbi cursus
+                                    nunc.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-item">
+                        <div class="block-item__content">
+                            <img src="./img/icon-earth.svg" alt="financeFlow">
+                            <div class="textbox">
+                                <h2 class="heading label">WORLDWIDE</h2>
+                                <p class="des lv2">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Et nibh urna in proin dui purus bibendum cras. Morbi cursus
+                                    nunc.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-item">
+                        <div class="block-item__content">
+                            <img src="./img/icon-magni.svg" alt="financeFlow">
+                            <div class="textbox">
+                                <h2 class="heading label">TRANSPARENT</h2>
+                                <p class="des lv2">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Et nibh urna in proin dui purus bibendum cras. Morbi cursus
+                                    nunc.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-item">
+                        <div class="block-item__content">
+                            <img src="./img/icon-compass.svg" alt="financeFlow">
+                            <div class="textbox">
+                                <h2 class="heading label">COMMUNITY DRIVEN</h2>
+                                <p class="des lv2">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Et nibh urna in proin dui purus bibendum cras. Morbi cursus
+                                    nunc.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blur">
+                    <img src="./img/icon-blur.svg" alt="financeFlow">
+                </div>
+            </div>
+        </section>
+
+        <section class="our fade">
+            <div class="container">
+                <div class="our__content">
+                    <div class="our__content-text">
+                        <h3 class="heading lv2">Our mission</h3>
+                        <p class="des">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Parturient lorem purus justo,
+                            ultricies. Sollicitudin odio
+                            elementum urna placerat lacus, vulputate. Non malesuada viverra et ultrices cras. Tincidunt
+                            tempor, blandit augue ac
+                            feugiat. Praesent arcu tempus ullamcorper quisque in. Magna fermentum, lacus, fermentum
+                            arcu.
+                        </p>
+                        <p class="des">
+                            Vulputate pellentesque proin facilisis dignissim gravida sed faucibus nunc. Nunc eget
+                            pharetra, in vitae porta lacus.
+                            Elit in nisl, in quis nulla tellus suscipit id. Semper velit odio cras pretium tristique
+                            habitant. Elit eu penatibus
+                            congue orci turpis. Enim diam id.
+                        </p>
+                    </div>
+
+                    <div class="our__content-text">
+                        <h3 class="heading lv2">Our story</h3>
+                        <p class="des">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Parturient lorem purus justo,
+                            ultricies. Sollicitudin
+                            odio
+                            elementum urna placerat lacus, vulputate. Non malesuada viverra et ultrices cras. Tincidunt
+                            tempor, blandit
+                            augue ac
+                            feugiat. Praesent arcu tempus ullamcorper quisque in. Magna fermentum, lacus, fermentum
+                            arcu.
+                        </p>
+                        <p class="des">
+                            Vulputate pellentesque proin facilisis dignissim gravida sed faucibus nunc. Nunc eget
+                            pharetra, in vitae porta
+                            lacus.
+                            Elit in nisl, in quis nulla tellus suscipit id. Semper velit odio cras pretium tristique
+                            habitant. Elit eu
+                            penatibus
+                            congue orci turpis. Enim diam id.
+                        </p>
+                    </div>
+                </div>
+                <picture class="our__img">
+                    <source media="(max-width: 992px )" srcset="./img/icon-planet.svg">
+                    <img srcset="./img/img-our.png 2x" alt="financeFlow">
+                </picture>
+            </div>
+        </section>
+
+        <section class="timeline fade">
+            <div class="container">
+                <div class="textbox sticky">
+                    <h3 class="heading lv2">Timeline</h3>
+                    <p class="des">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+                        elementum tristique. Duis
+                        cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+                    </p>
+                </div>
+                <div class="timeline__content">
+                    <div class="timeline__item">
+                        <img src="./img/icon-point.svg" alt="financeFlow">
+                        <div class="timeline__item-detail">
+                            <span>2014</span>
+                            <div class="textbox">
+                                <span class="heading label">ANNOUNCEMENT</span>
+                                <p class="des">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis vivamus at
+                                    mattis
+                                    bibendum congue cras id interdum.
+                                    Risus leo et.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item">
+                        <img src="./img/icon-point.svg" alt="financeFlow">
+                        <div class="timeline__item-detail">
+                            <span>2016</span>
+                            <div class="textbox">
+                                <span class="heading label">ANNOUNCEMENT</span>
+                                <p class="des">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis vivamus at
+                                    mattis
+                                    bibendum congue cras id interdum.
+                                    Risus leo et.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item">
+                        <img src="./img/icon-point.svg" alt="financeFlow">
+                        <div class="timeline__item-detail">
+                            <span>2018</span>
+                            <div class="textbox">
+                                <span class="heading label">ANNOUNCEMENT</span>
+                                <p class="des">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis vivamus at
+                                    mattis
+                                    bibendum congue cras id interdum.
+                                    Risus leo et.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item">
+                        <img src="./img/icon-point.svg" alt="financeFlow">
+                        <div class="timeline__item-detail">
+                            <span>2022</span>
+                            <div class="textbox">
+                                <span class="heading label">ANNOUNCEMENT</span>
+                                <p class="des">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis vivamus at
+                                    mattis
+                                    bibendum congue cras id interdum.
+                                    Risus leo et.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team fade">
+            <div class="container">
+                <div class="textbox row">
+                    <h2 class="heading lv2">Our Team</h2>
+                    <p class="des">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Parturient lorem purus justo, ultricies.
+                    </p>
+                </div>
+
+                <div class="team__wrapper">
+                    <div class="team__member">
+                        <div class="team__member-img">
+                            <img srcset="./img/img2-male.png 2x" alt="financeFlow">
+                        </div>
+                        <div class="user">
+                            <div>
+                                <span>JOHN CARTER</span>
+                                <span>CEO & CO-FOUNDER</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team__member">
+                        <div class="team__member-img">
+                            <img srcset="./img/img2-shortHairFemale.png 2x" alt="financeFlow">
+                        </div>
+                        <div class="user">
+                            <div>
+                                <span>SOPHIE MOORE</span>
+                                <span>COMMUNITY LEAD</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team__member">
+                        <div class="team__member-img">
+                            <img srcset="./img/img3-male.png 2x" alt="financeFlow">
+                        </div>
+                        <div class="user">
+                            <div>
+                                <span>ALEX TURNER</span>
+                                <span>OPERATIONS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="investors fade">
+            <div class="container">
+                <div class="company">
+                    <div class="textbox">
+                        <h2 class="heading lv2">Investors</h2>
+                        <p class="des">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Parturient lorem purus justo, ultricies.
+                        </p>
+                    </div>
+                    <div class="company__content">
+                        <a href="#">
+                            <img src="./img/icon-companyLeft.svg" alt="financeFlow">
+                        </a>
+
+                        <a href="#">
+                            <img src="./img/icon-companyColumn.svg" alt="financeFlow">
+                        </a>
+
+                        <a href="#">
+                            <img src="./img/icon-companyCircle.svg" alt="">
+                        </a>
+
+                        <a href="#">
+                            <img src="./img/icon-companySquare.svg" alt="">
+                        </a>
+
+                        <a href="#">
+                            <img src="./img/icon-companyCircleBot.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <a href="./" class="footer__logo">
+                    <img src="./img/icon-logo.svg" alt="financeFlow">
+                </a>
+
+                <div class="sns">
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="./img/icon-instagram.svg" alt="financeFlow">
+                    </a>
+
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img src="./img/icon-facebook.svg" alt="financeFlow">
+                    </a>
+
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        <img src="./img/icon-linkedIn.svg" alt="financeFlow">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__mid">
+                <div class="footer__menu">
+                    <span class="menu">MENU</span>
+                    <div class="footer__menu-wrapper">
+                        <div>
+                            <a href="./">HOME</a>
+                            <a href="./about.html">ABOUT</a>
+                            <a href="./pricing.html">PRICING</a>
+                        </div>
+
+                        <div>
+                            <a href="./tokens.html">TOKENS</a>
+                            <a href="./blog.html">BLOG</a>
+                            <a href="./contact.html">CONTACT US</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__download">
+                    <div class="textbox">
+                        <h2 class="heading label">DOWNLOAD OUR APPLICATION</h2>
+                        <p class="des">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Mauris sed nulla integer
+                        </p>
+                    </div>
+                    <div class="reg-btn__wrapper">
+                        <a href="https://www.apple.com/vn/app-store/" target="_blank" class="reg-btn">
+                            <img src="./img/icon-apple.svg" alt="">
+                            APP STORE
+                        </a>
+
+                        <a href="https://play.google.com/store/games" target="_blank" class="reg-btn">
+                            <img src="./img/icon-playStore.svg" alt="">
+                            PLAY STORE
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bot">
+                <span class="copyright">© 2023 CFD Circle, Inc.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./dest/jsmain.min.js"></script>
+    <script src="./dest/main.js"></script>
+</body>

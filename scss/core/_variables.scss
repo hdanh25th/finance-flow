@@ -1,0 +1,81 @@
+:root {
+    --gap: 28px;
+    --grid-gap: 26px;
+    --max-width-page: 2560px;
+    --max-width-container-fluid: 1920px;
+    --max-width-container: calc(1196px + calc(var(--gap)*2));
+    --initial-width: 1196px;
+    --padding: calc((100vw - var(--max-width-container) - 28px) / 2);
+    --header-height: 132px;
+
+    --heading: 6.6rem;
+    --heading-lv2: 4.2rem;
+    --label: 1.8rem;
+    --textBtn: 1.6rem;
+    --body: 1.8rem;
+    --body-lv2: 1.6rem;
+    --textMenu: 1.4rem;
+    --textTag: 1.4rem;
+
+    --heading-lh: 80px;
+    --heading-lh-lv2: 55px;
+    --label-lh: 26px;
+    --textBtn-lh: 16px;
+    --body-lh: 32px;
+    --body-lh-lv2: 26px;
+    --textMenu-lh: 16px;
+    --textTag-lh: 18px;
+
+    --heading-ls: -1px;
+    --heading-ls-lv2: 0px;
+    --label-ls: 0.9px;
+    --textBtn-ls: 1.6px;
+    --body-ls: 0px;
+    --body-ls-lv2: 0px;
+    --textMenu-ls: 1.4px;
+    --textTag-ls: 0.7px;
+
+    --time: 0.4s;
+    --cubic: cubic-bezier(0.59, 0.29, 0.15, 0.93);
+    --blue-cl: #0328EE;
+    --darkBlue-cl: #010D50;
+    --bg-cl: #010725;
+    --white-cl: #ffffff;
+
+    // Responsive
+    @include md {
+        --container-max-width: 1140px;
+        --header-height: 73px;
+    }
+
+    @include sm {
+        --container-max-width: 960px; // or 100%, depend
+    }
+
+    @include xs {
+        --container-max-width: 100%; // or 100%, depend
+        --gap: 15px;
+        --grid-gap: 16px;
+        --header-height: 73px;
+
+        --heading: 3.8rem;
+        --heading-lv2: 2.8rem;
+        --label: 1.4rem;
+        --body: 1.6rem;
+        --textMenu: 3.2rem;
+
+        --heading-lh: 46px;
+        --heading-lh-lv2: 36px;
+        --label-lh: 18px;
+        --body-lh: 26px;
+        --textMenu-lh: 100%;
+
+        --heading-ls: -1px;
+        --label-ls: 0.7px;
+        // Set for other devices too if required
+    }
+
+    // @include xxs {
+    //     --container-max-width: 100%;
+    // }
+}

@@ -1,0 +1,44 @@
+html {
+    font-size: 62.5%; // for rem usage ( 1rem = 10px )
+}
+
+body {
+    width: 100%;
+    max-width: var(--max-width-page);
+    margin: auto;
+    scroll-behavior: smooth;
+    color: var(--white-cl);
+    font-family: ds;
+    font-size: var(--body);
+    line-height: var(--body-lh);
+    letter-spacing: var(--body-ls);
+    background-color: var(--bg-cl);
+    overflow-x: hidden;
+
+    &.disable-scroll {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .container-fluid {
+        width: 100%;
+        max-width: var(--max-width-container-fluid);
+        padding: 0 var(--gap);
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .container {
+        width: 100%;
+        max-width: var(--max-width-container);
+        padding: 0 var(--gap);
+        margin: 0 auto;
+        position: relative;
+    }
+
+    main {
+        position: relative;
+    }
+
+
+}

@@ -1,0 +1,180 @@
+.header {
+    height: var(--header-height);
+    position: fixed;
+    width: 100%;
+    z-index: 7;
+    background: linear-gradient(var(--bg-cl), transparent);
+    @include transition(var(--time));
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+
+        .blur {
+            left: -45%;
+        }
+    }
+
+    &.change {
+        background-color: var(--blue-cl);
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    &__logo {
+        display: flex;
+        z-index: 1;
+
+        &.hidden {
+            display: none;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        position: relative;
+        margin-left: 51px;
+
+        li {
+            a {
+                color: var(--white-cl);
+                font-family: dsm;
+                font-size: var(--textMenu);
+                line-height: var(--textMenu-lh);
+                letter-spacing: var(--textMenu-ls);
+                padding: 0 13.5px;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    background-color: var(--white-cl);
+                    height: 1px;
+                    width: calc(100% - 27px);
+                    bottom: -1px;
+                    visibility: hidden;
+                    opacity: 0;
+                    @include transition(var(--time));
+                }
+
+                &:hover {
+                    &::before {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+
+                &.active {
+                    &::before {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 66px;
+            background-color: var(--darkBlue-cl);
+            left: -19px;
+            top: -16px;
+        }
+    }
+
+    &__btn {
+        height: 56px;
+        background-color: var(--blue-cl);
+        display: flex;
+        align-items: center;
+        font-family: dsb;
+        font-size: var(--textBtn);
+        line-height: var(--textBtn-lh);
+        letter-spacing: var(--textBtn-ls);
+        color: var(--white-cl);
+        padding: 0 32px;
+        border-radius: 80px;
+        @include transition(var(--time));
+        z-index: 1;
+
+        &:hover {
+            background-color: var(--darkBlue-cl);
+        }
+    }
+
+    &__hambur {
+        display: none;
+        width: 45px;
+        height: 45px;
+        background-color: var(--blue-cl);
+        border-radius: 1000px;
+        cursor: pointer;
+
+        span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: var(--white-cl);
+            @include transition(var(--time));
+
+            &:nth-child(2) {
+                margin: 6px 0;
+            }
+        }
+
+        &.active {
+            span {
+                &:nth-child(1) {
+                    transform: rotate(45deg) translate(1px, 0px);
+                }
+
+                &:nth-child(3) {
+                    transform: rotate(-45deg) translate(1px, 0px);
+                }
+
+                &:nth-child(2) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1020px) {
+        .container {
+            align-items: flex-end;
+        }
+
+        .blur {
+            display: none;
+        }
+
+        .header__menu {
+            display: none;
+        }
+
+        .header__logo {
+            display: none;
+
+            &.hidden {
+                display: flex;
+            }
+        }
+
+        .header__btn {
+            display: none;
+        }
+
+        .header__hambur {
+            @include mid(true);
+            flex-direction: column;
+        }
+    }
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>financeFlow</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- Facebook -->
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <!-- Twitter -->
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:card" content="">
+    <meta name="twitter:site" content="">
+    <link rel="canonical" href="https://cfdcircle.vn" />
+    <!-- Favicon -->
+    <link rel="icon" href="./img/favicon.ico">
+
+    <link rel="stylesheet" href="./dest/style.min.css">
+    <link rel="stylesheet" href="./dest/fonts.css">
+
+    <style>
+        .loading {
+            z-index: 9999;
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--bg-cl);
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loading .loading__bars {
+            width: 160px;
+            height: 4px;
+            position: relative;
+            background-color: var(--blue-cl);
+            margin-bottom: 15px;
+        }
+
+        .loading .loading__bars div {
+            position: absolute;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: var(--white-cl);
+        }
+
+        .loading .loading__percentage {
+            color: var(--white-cl);
+            font-size: var(--btn-text);
+            line-height: var(--btn-lh);
+            letter-spacing: var(--btn-ls);
+            position: relative;
+        }
+
+        .loading.completed {
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+            -webkit-transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body class="disable-scroll">
+    <ul class="mobile-menu">
+        <li>
+            <a href="./" class="active" id="index">HOME</a>
+        </li>
+
+        <li>
+            <a href="./about.html" id="about">ABOUT</a>
+        </li>
+
+        <li>
+            <a href="./pricing.html" id="pricing">PRICING</a>
+        </li>
+
+        <li>
+            <a href="./tokens.html" id="tokens">TOKENS</a>
+        </li>
+
+        <li>
+            <a href="./blog.html" id="blog">BLOG</a>
+        </li>
+
+        <li>
+            <a href="./contact.html" id="contact">CONTACT US</a>
+        </li>
+        <a href="#" class="reg-btn mobile">DOWNLOAD APP</a>
+        <div class="blur">
+            <img src="./img/icon-blurM.svg" alt="">
+        </div>
+    </ul>
+
+    <div class="loading">
+        <div class="loading__bars">
+            <div></div>
+        </div>
+        <div class="loading__percentage">0%</div>
+    </div>
+
+    <header class="header">
+
+        <div class="container">
+            <div class="header__left">
+                <a href="./index.html" class="header__logo">
+                    <img src="./img/icon-logo.svg" alt="financeFlow">
+                </a>
+                <a href="./index.html" class="header__logo hidden">
+                    <img src="./img/icon-logoM.svg" alt="financeFlow">
+                </a>
+                <ul class="header__menu">
+                    <li>
+                        <a href="./index.html" class="active" id="index">HOME</a>
+                    </li>
+                    <li>
+                        <a href="./about.html" id="about">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="./pricing.html" id="pricing">PRICING</a>
+                    </li>
+                    <li>
+                        <a href="./tokens.html" id="tokens">TOKEN</a>
+                    </li>
+                    <li>
+                        <a href="./blog.html" id="blog">BLOG</a>
+                    </li>
+                    <li>
+                        <a href="./contact.html" id="contact">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+
+            <a href="https://cfdcircle.vn/" target="_blank" class="header__btn">DOWNLOAD APP</a>
+
+            <div class="header__hambur">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="notfound">
+        <section class="error">
+            <div class="container">
+                <h1>404</h1>
+                <div class="textbox">
+                    <h2 class="heading lv2">Page Not Found</h2>
+                    <p class="des">
+                        The page you're looking for can't be found. Double-check the URL and try again. Or click the
+                        button below.
+                    </p>
+                </div>
+                <div class="reg-btn__wrapper">
+                    <a href="./pricing.html" class="reg-btn">VIEW PRICING</a>
+                    <a href="./index.html" class="reg-btn v2">GO HOME</a>
+                </div>
+
+                <div class="blur">
+                    <img src="./img/icon-blur.svg" alt="financeFlow">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./dest/jsmain.min.js"></script>
+    <script src="./dest/main.js"></script>
+</body>

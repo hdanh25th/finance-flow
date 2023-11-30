@@ -1,0 +1,84 @@
+.flickity-page-dots {
+    bottom: -58px;
+
+    .dot {
+        width: 14px;
+        height: 14px;
+        background-color: rgba(255, 255, 255, 0.4);
+
+        &.is-selected {
+            background-color: var(--white-cl);
+        }
+    }
+}
+
+// Blog
+.button-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 26px;
+
+    .button {
+        @include transition(var(--time));
+
+        // display: inline-block;
+        &.button--previous,
+        &.button--next {
+            width: 36px;
+            height: 36px;
+            background-color: var(--darkBlue-cl);
+            border-radius: 1000px;
+            position: relative;
+            @include transition(var(--time));
+
+            svg {
+                @include mid(false);
+
+                path {
+                    @include transition(var(--time));
+                }
+            }
+
+            &.disable {
+                background-color: rgba(255, 255, 255, 0.1);
+
+                svg {
+                    path {
+                        stroke-opacity: 0.2;
+                    }
+                }
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                cursor: initial;
+            }
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        &.button--next {
+            transform: rotate(180deg);
+        }
+
+        &.is-selected {
+            color: var(--blue-cl);
+        }
+
+        &:hover {
+            color: var(--blue-cl);
+            cursor: pointer;
+        }
+
+    }
+
+    .button-group {
+        display: flex;
+        align-items: center;
+        gap: 33px;
+        margin: 0 24px;
+    }
+}

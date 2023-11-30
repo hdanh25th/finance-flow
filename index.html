@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>financeFlow</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- Facebook -->
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <!-- Twitter -->
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:card" content="">
+    <meta name="twitter:site" content="">
+    <link rel="canonical" href="https://cfdcircle.vn" />
+    <!-- Favicon -->
+    <link rel="icon" href="./img/favicon.ico">
+
+    <link rel="stylesheet" href="./dest/style.min.css">
+    <link rel="stylesheet" href="./dest/fonts.css">
+    <style>
+        .loading {
+            z-index: 9999;
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--bg-cl);
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loading .loading__bars {
+            width: 160px;
+            height: 4px;
+            position: relative;
+            background-color: var(--blue-cl);
+            margin-bottom: 15px;
+        }
+
+        .loading .loading__bars div {
+            position: absolute;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: var(--white-cl);
+        }
+
+        .loading .loading__percentage {
+            color: var(--white-cl);
+            font-size: var(--btn-text);
+            line-height: var(--btn-lh);
+            letter-spacing: var(--btn-ls);
+            position: relative;
+        }
+
+        .loading.completed {
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+            -webkit-transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body class="disable-scroll">
+    <div class="p-video">
+        <div class="p-video__inner">
+            <div class="p-video__inner--iframe">
+                <iframe width="100%" height="100%" src="" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+                <div class="p-video__inner--close">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="30" height="30" fill="#0328EE" />
+                        <path
+                            d="M11.2668 9.86665C11.1474 9.86665 11.0279 9.91213 10.9369 10.0034L10.0035 10.9367C9.82108 11.1192 9.82108 11.4146 10.0035 11.5966L13.4069 15L10.0035 18.4034C9.82108 18.5858 9.82108 18.8813 10.0035 19.0633L10.9369 19.9966C11.1193 20.1791 11.4148 20.1791 11.5968 19.9966L15.0002 16.5932L18.4035 19.9966C18.5855 20.1791 18.8814 20.1791 19.0634 19.9966L19.9968 19.0633C20.1792 18.8808 20.1792 18.5854 19.9968 18.4034L16.5934 15L19.9968 11.5966C20.1792 11.4146 20.1792 11.1187 19.9968 10.9367L19.0634 10.0034C18.881 9.8209 18.5855 9.8209 18.4035 10.0034L15.0002 13.4068L11.5968 10.0034C11.5055 9.91213 11.3862 9.86665 11.2668 9.86665Z"
+                            fill="#ffffff" />
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <ul class="mobile-menu">
+        <li>
+            <a href="./" class="active" id="indexm">HOME</a>
+        </li>
+
+        <li>
+            <a href="./about.html" id="about">ABOUT</a>
+        </li>
+
+        <li>
+            <a href="./pricing.html" id="pricing">PRICING</a>
+        </li>
+
+        <li>
+            <a href="./tokens.html" id="tokens">TOKENS</a>
+        </li>
+
+        <li>
+            <a href="./blog.html" id="blog">BLOG</a>
+        </li>
+
+        <li>
+            <a href="./contact.html" id="contact">CONTACT US</a>
+        </li>
+        <a href="#" class="reg-btn mobile">DOWNLOAD APP</a>
+        <div class="blur">
+            <img src="./img/icon-blurM.svg" alt="">
+        </div>
+    </ul>
+
+    <div class="loading">
+        <div class="loading__bars">
+            <div></div>
+        </div>
+        <div class="loading__percentage">0%</div>
+    </div>
+
+    <div class="progress"></div>
+
+    <header class="header">
+
+        <div class="container">
+            <div class="header__left">
+                <a href="./index.html" class="header__logo">
+                    <img src="./img/icon-logo.svg" alt="financeFlow">
+                </a>
+                <a href="./index.html" class="header__logo hidden">
+                    <img src="./img/icon-logoM.svg" alt="financeFlow">
+                </a>
+                <ul class="header__menu">
+                    <li>
+                        <a href="./index.html" class="active" id="index">HOME</a>
+                    </li>
+                    <li>
+                        <a href="./about.html" id="about">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="./pricing.html" id="pricing">PRICING</a>
+                    </li>
+                    <li>
+                        <a href="./tokens.html" id="tokens">TOKEN</a>
+                    </li>
+                    <li>
+                        <a href="./blog.html" id="blog">BLOG</a>
+                    </li>
+                    <li>
+                        <a href="./contact.html" id="contact">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+
+            <a href="https://cfdcircle.vn/" target="_blank" class="header__btn">DOWNLOAD APP</a>
+
+            <div class="header__hambur">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <main class="homepage">
+        <section class="hero fade">
+            <div class="container">
+                <div class="hero__left">
+                    <div class="textbox">
+                        <h1 class="heading">Buy, trade, and hold 350+ cryptocurrencies</h1>
+                        <p class="des">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Feugiat nulla suspendisse tortor aenean dis placerat.
+                        </p>
+                    </div>
+
+                    <div class="reg-btn__wrapper">
+                        <a href="https://cfdcircle.vn/" target="_blank" class="reg-btn">DOWNLOAD APP</a>
+
+                        <a href="./pricing.html" class="reg-btn v2">VIEW PRICING</a>
+                    </div>
+                </div>
+                <div class="hero__planet">
+                    <img src="./img/icon-planet.svg" alt="financeFlow">
+                    <img src="./img/icon-blur.svg" alt="financeFlow">
+                </div>
+                <div class="blur">
+                    <img src="./img/icon-blurDark.svg" alt="financeFlow">
+                </div>
+            </div>
+        </section>
+
+        <section class=" featured fade">
+            <div class="container">
+                <div class="company">
+                    <div class="textbox">
+                        <p class="des">Finance flow has been featured on</p>
+                        <p class="des hidden">Crypto App has been featured on</p>
+                    </div>
+                    <div class="company__content">
+                        <a href="#">
+                            <img src="./img/icon-companyLeft.svg" alt="financeFlow">
+                        </a>
+
+                        <a href="#">
+                            <img src="./img/icon-companyColumn.svg" alt="financeFlow">
+                        </a>
+
+                        <a href="#">
+                            <img src="./img/icon-companyCircle.svg" alt="">
+                        </a>
+
+                        <a href="#">
+                            <img src="./img/icon-companySquare.svg" alt="">
+                        </a>
+
+                        <a href="#">
+                            <img src="./img/icon-companyCircleBot.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio fade">
+            <div class="container">
+                <div class="blur">
+                    <img src="./img/icon-blur.svg" alt="financeFlow">
+                </div>
+
+                <div class="textbox free">
+                    <h2 class="heading">Build your crypto portfolio</h2>
+                    <p class="des">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Feugiat nulla suspendisse tortor aene.
+                    </p>
+                </div>
+
+                <div class="portfolio__wrapper">
+                    <div class="block-item">
+                        <div class="block-item__content">
+                            <img src="./img/icon-twoSideArrow.svg" alt="">
+                            <div class="textbox">
+                                <h2 class="heading label">SEND & RECEIVE</h2>
+                                <p class="des lv2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Feugiat nulla suspendisse tortor aene.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="block-item">
+                        <div class="block-item__content">
+                            <img src="./img/icon-wallet.svg" alt="financeFlow">
+                            <div class="textbox">
+                                <h2 class="heading label">100% SECURE WALLET</h2>
+                                <p class="des lv2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Feugiat nulla suspendisse tortor aene.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="block-item">
+                        <div class="block-item__content">
+                            <img src="./img/icon-charts.svg" alt="financeFlow">
+                            <div class="textbox">
+                                <h2 class="heading label">TRADING CHARTS</h2>
+                                <p class="des lv2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Feugiat nulla suspendisse tortor aene.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="block-item">
+                        <div class="block-item__content">
+                            <img src="./img/icon-ouroboros.svg" alt="img">
+                            <div class="textbox">
+                                <h2 class="heading label">REAL TIME TRADING</h2>
+                                <p class="des lv2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Feugiat nulla suspendisse tortor aene.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="phone">
+                        <div class="textbox">
+                            <h2 class="heading label">IOS & ANDROID APP</h2>
+                            <p class="des lv2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                In amet, morbi non at sed neque.
+                            </p>
+                        </div>
+                        <picture class="phone__img">
+                            <source media="(max-width: 767px )" srcset="./img/Phone70.png 2x">
+                            <img srcset="./img/halfPhone1.png 2x" alt="financeFlow">
+                        </picture>
+
+                    </div>
+                </div>
+
+                <a href="https://cfdcircle.vn/" target="_blank" class="reg-btn">DOWNLOAD APP</a>
+            </div>
+        </section>
+
+        <section class="earn fade">
+            <div class="container">
+                <div class="earn__wrapper">
+                    <div class="earn__img">
+                        <img srcset="./img/img-doublePhone.png 2x" alt="financeFlow">
+                    </div>
+                    <div class="earn__content">
+                        <div class="textbox ">
+                            <h2 class="heading lv2">
+                                Earn daily rewards on your idle tokens
+                            </h2>
+
+                            <p class="des">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse
+                                tortor
+                                aene.
+                            </p>
+
+                            <div class="noteable">
+                                <div>
+                                    <img src="./img/icon-downMarket.svg" alt="financeFlow">
+                                    <span>Lowest fees in market</span>
+                                </div>
+
+                                <div>
+                                    <img src="./img/icon-lightning.svg" alt="financeFlow">
+                                    <span>Fast and secure transactions</span>
+                                </div>
+
+                                <div>
+                                    <img src="./img/icon-lock.svg" alt="financeFlow">
+                                    <span>256-bit secure encryption</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="earn__wrapper bottom">
+                    <div class="earn__img">
+                        <img src="./img/img-screen.png" alt="financeFlow">
+                    </div>
+                    <div class="earn__content">
+                        <div class="textbox">
+                            <h2 class="heading lv2">
+                                Earn daily rewards on your idle tokens
+                            </h2>
+
+                            <p class="des">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse
+                                tortor
+                                aene.
+                            </p>
+
+                            <div class="noteable">
+                                <div>
+                                    <img src="./img/icon-protected.svg" alt="financeFlow">
+                                    <span>100% Private data</span>
+                                </div>
+
+                                <div>
+                                    <img src="./img/icon-99.svg" alt="financeFlow">
+                                    <span>99.99% Uptime guarantee</span>
+                                </div>
+
+                                <div>
+                                    <img src="./img/icon-message.svg" alt="financeFlow">
+                                    <span>24/7 Dedicated support</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blur">
+                    <img src="./img/icon-blur.svg" alt="financeFlow">
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="explore fade">
+            <div class="container">
+                <div class="explore__info">
+                    <div class="textbox">
+                        <h2 class="heading lv2">Explore endless possibilities with FinanceFlow</h2>
+                        <p class="des">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Feugiat nulla suspendisse tortor aene.
+                        </p>
+                    </div>
+
+                    <a href="https://cfdcircle.vn/" target="_blank" class="reg-btn v3">DOWNLOAD APP</a>
+                </div>
+
+                <div class="explore__img">
+                    <div>
+                        <img srcset="./img/img-doublePhone.png 2x" alt="financeFlow">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="users fade">
+            <div class="container">
+                <div class="textbox">
+                    <h2 class="heading lv2">What our users say?</h2>
+                </div>
+                <a href="https://cfdcircle.vn/" target="_blank" class="reg-btn">DOWNLOAD APP</a>
+
+                <div class="blur">
+                    <img src="./img/icon-blur.svg" alt="financeFlow">
+                </div>
+            </div>
+
+            <div class="users__wrapper">
+                <div class="users__item">
+                    <div class="textbox">
+                        <p class="des">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor
+                            fermentum dignissim et
+                            pellentesque egestas
+                            mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”
+                        </p>
+                    </div>
+                    <div class="user">
+                        <img srcset="./img/img-shortHairFemale.png 2x" alt="financeFlow">
+                        <div>
+                            <span>JOHN CARTER</span>
+                            <span>ROLE.COMPANY</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="users__item">
+                    <div class="textbox">
+                        <p class="des">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor
+                            fermentum dignissim et
+                            pellentesque egestas
+                            mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”
+                        </p>
+                    </div>
+                    <div class="user">
+                        <img srcset="./img/img-longHairFemale.png 2x" alt="financeFlow">
+                        <div>
+                            <span>JOHN CARTER</span>
+                            <span>ROLE.COMPANY</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="users__item">
+                    <div class="textbox">
+                        <p class="des">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor
+                            fermentum dignissim et
+                            pellentesque egestas
+                            mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”
+                        </p>
+                    </div>
+                    <div class="user">
+                        <img srcset="./img/img-male-2x.png 2x" alt="">
+                        <div>
+                            <span>JOHN CARTER</span>
+                            <span>ROLE.COMPANY</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="users__item">
+                    <div class="textbox">
+                        <p class="des">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor
+                            fermentum dignissim et
+                            pellentesque egestas
+                            mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”
+                        </p>
+                    </div>
+                    <div class="user">
+                        <img srcset="./img/img-shortHairFemale.png 2x" alt="financeFlow">
+                        <div>
+                            <span>JOHN CARTER</span>
+                            <span>ROLE.COMPANY</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="users__item">
+                    <div class="textbox">
+                        <p class="des">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor
+                            fermentum dignissim et
+                            pellentesque egestas
+                            mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”
+                        </p>
+                    </div>
+                    <div class="user">
+                        <img srcset="./img/img-longHairFemale.png 2x" alt="financeFlow">
+                        <div>
+                            <span>JOHN CARTER</span>
+                            <span>ROLE.COMPANY</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="users__item">
+                    <div class="textbox">
+                        <p class="des">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo dolor
+                            fermentum dignissim et
+                            pellentesque egestas
+                            mauris, faucibus. Tellus nisi amet non at phasellus faucibus senectus in”
+                        </p>
+                    </div>
+                    <div class="user">
+                        <img srcset="./img/img-male-2x.png 2x" alt="">
+                        <div>
+                            <span>JOHN CARTER</span>
+                            <span>ROLE.COMPANY</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="started fade">
+            <div class="container">
+                <div class="textbox">
+                    <h2 class="heading lv2">
+                        Get started today
+                    </h2>
+
+                    <p class="des">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat nulla suspendisse
+                        tortor
+                        aene.
+                    </p>
+
+                    <div class="noteable">
+                        <div>
+                            <img src="./img/icon-download.svg" alt="financeFlow">
+                            <span>Download app</span>
+                        </div>
+
+                        <div>
+                            <img src="./img/icon-user.svg" alt="financeFlow">
+                            <span>Create a free account</span>
+                        </div>
+
+                        <div>
+                            <img src="./img/icon-eWallet.svg" alt="financeFlow">
+                            <span>Start trading</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="started__video">
+                    <div class="started__video-img">
+                        <img srcset="./img/img-videoBg.png 2x" alt="financeFlow">
+                    </div>
+                    <div class="play-frame" data-video-src="w4zMxwRmtjA">
+                        <div>
+                            <svg width="26" height="29" viewBox="0 0 26 29" fill="none\"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.930664 27.2345C0.930664 28.3895 2.17812 29.1139 3.18127 28.5413L25.2412 15.9515C26.2531 15.3741 26.2531 13.9152 25.2412 13.3377L3.18127 0.747929C2.17812 0.175422 0.930664 0.899804 0.930664 2.05482V27.2345Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="news fade">
+            <div class="container">
+                <div class="textbox row">
+                    <h2 class="heading lv2">Browse our latest news</h2>
+                    <p class="des">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sit non neque orci amet, amet .
+                    </p>
+                </div>
+
+                <div class="news__wrapper">
+                    <div class="news__item">
+                        <div class="news__item-img">
+                            <a href="#">
+                                <img src="./img/img1-news.jpg" alt="financeFlow">
+                            </a>
+                        </div>
+
+                        <div class="news__item-content">
+                            <span class="tag">PRODUCTS</span>
+                            <div class="textbox">
+                                <a href="">
+                                    <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                </a>
+                                <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                    Scelerisque viverra donec diammeo.
+                                </p>
+                            </div>
+
+                            <div class="user line">
+                                <img srcset="./img/img-male-2x.png 2x" alt="">
+                                <div>
+                                    <span>ALEX TURNER</span>
+                                    <span>AUGUST 2, 2021</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="news__item">
+                        <div class="news__item-img">
+                            <a href="#">
+                                <img src="./img/img2-news.jpg" alt="financeFlow">
+                            </a>
+                        </div>
+
+                        <div class="news__item-content">
+                            <span class="tag">PRODUCTS</span>
+
+                            <div class="textbox">
+                                <a href="">
+                                    <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                </a>
+                                <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                    Scelerisque viverra donec diammeo.
+                                </p>
+                            </div>
+
+                            <div class="user line">
+                                <img srcset="./img/img-male-2x.png 2x" alt="">
+                                <div>
+                                    <span>ALEX TURNER</span>
+                                    <span>AUGUST 2, 2021</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="news__item">
+                        <div class="news__item-img">
+                            <a href="#">
+                                <img src="./img/img3-news.jpg" alt="financeFlow">
+                            </a>
+                        </div>
+
+                        <div class="news__item-content">
+                            <span class="tag">PRODUCTS</span>
+
+                            <div class="textbox">
+                                <a href="">
+                                    <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                </a>
+                                <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                    Scelerisque viverra donec diammeo.
+                                </p>
+                            </div>
+
+                            <div class="user line">
+                                <img srcset="./img/img-male-2x.png 2x" alt="">
+                                <div>
+                                    <span>ALEX TURNER</span>
+                                    <span>AUGUST 2, 2021</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="reg-btn v2">VIEW ALL ARTICLES</a>
+            </div>
+        </section>
+
+        <section class="download fade">
+            <div class="container">
+                <div class="textbox row">
+                    <h2 class="heading lv2">Download our app</h2>
+                    <p class="des">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sit non neque orci amet, amet .
+                    </p>
+                </div>
+
+                <div class="download__wrapper">
+                    <div class="phone bg">
+                        <div class="textbox">
+                            <h2 class="heading lv2">DOWNLOAD FOR iOS</h2>
+                            <p class="des">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Mauris sed nulla integer in pellentesque tortor semper
+                                elementum. Felis.
+                            </p>
+                            <a href="https://www.apple.com/vn/app-store/" target="_blank" class="reg-btn">
+                                <img src="./img/icon-apple.svg" alt="financeFlow">
+                                APP STORE
+                            </a>
+                        </div>
+                        <div class="phone__img">
+                            <img srcset="./img/halfPhone2.png 2x" alt="financeFlow">
+                        </div>
+                    </div>
+
+                    <div class="phone bg">
+                        <div class="textbox">
+                            <h2 class="heading lv2">DOWNLOAD FOR iOS</h2>
+                            <p class="des">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Mauris sed nulla integer in pellentesque tortor semper
+                                elementum. Felis.
+                            </p>
+                            <a href="https://play.google.com/store/games" target="_blank" class="reg-btn">
+                                <img src="./img/icon-playStore.svg" alt="financeFlow">
+                                PLAY STORE
+                            </a>
+                        </div>
+                        <div class="phone__img">
+                            <img srcset="./img/halfPhone3.png 2x" alt="financeFlow">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <a href="./" class="footer__logo">
+                    <img src="./img/icon-logo.svg" alt="financeFlow">
+                </a>
+
+                <div class="sns">
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="./img/icon-instagram.svg" alt="financeFlow">
+                    </a>
+
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img src="./img/icon-facebook.svg" alt="financeFlow">
+                    </a>
+
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        <img src="./img/icon-linkedIn.svg" alt="financeFlow">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__mid">
+                <div class="footer__menu">
+                    <span class="menu">MENU</span>
+                    <div class="footer__menu-wrapper">
+                        <div>
+                            <a href="./">HOME</a>
+                            <a href="./about.html">ABOUT</a>
+                            <a href="./pricing.html">PRICING</a>
+                        </div>
+
+                        <div>
+                            <a href="./tokens.html">TOKENS</a>
+                            <a href="./blog.html">BLOG</a>
+                            <a href="./contact.html">CONTACT US</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__download">
+                    <div class="textbox">
+                        <h2 class="heading label">DOWNLOAD OUR APPLICATION</h2>
+                        <p class="des">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Mauris sed nulla integer
+                        </p>
+                    </div>
+                    <div class="reg-btn__wrapper">
+                        <a href="https://www.apple.com/vn/app-store/" target="_blank" class="reg-btn">
+                            <img src="./img/icon-apple.svg" alt="">
+                            APP STORE
+                        </a>
+
+                        <a href="https://play.google.com/store/games" target="_blank" class="reg-btn">
+                            <img src="./img/icon-playStore.svg" alt="">
+                            PLAY STORE
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bot">
+                <span class="copyright">© 2023 CFD Circle, Inc.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./dest/jsmain.min.js"></script>
+    <script src="./dest/main.js"></script>
+</body>

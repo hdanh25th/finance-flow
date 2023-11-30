@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>financeFlow</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- Facebook -->
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <!-- Twitter -->
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:card" content="">
+    <meta name="twitter:site" content="">
+    <link rel="canonical" href="https://cfdcircle.vn" />
+    <!-- Favicon -->
+    <link rel="icon" href="./img/favicon.ico">
+
+    <link rel="stylesheet" href="./dest/style.min.css">
+    <link rel="stylesheet" href="./dest/fonts.css">
+    <style>
+        .loading {
+            z-index: 9999;
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--bg-cl);
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loading .loading__bars {
+            width: 160px;
+            height: 4px;
+            position: relative;
+            background-color: var(--blue-cl);
+            margin-bottom: 15px;
+        }
+
+        .loading .loading__bars div {
+            position: absolute;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: var(--white-cl);
+        }
+
+        .loading .loading__percentage {
+            color: var(--white-cl);
+            font-size: var(--btn-text);
+            line-height: var(--btn-lh);
+            letter-spacing: var(--btn-ls);
+            position: relative;
+        }
+
+        .loading.completed {
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+            -webkit-transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body class="disable-scroll">
+    <ul class="mobile-menu">
+        <li>
+            <a href="./" class="active" id="index">HOME</a>
+        </li>
+
+        <li>
+            <a href="./about.html" id="about">ABOUT</a>
+        </li>
+
+        <li>
+            <a href="./pricing.html" id="pricing">PRICING</a>
+        </li>
+
+        <li>
+            <a href="./tokens.html" id="tokens">TOKENS</a>
+        </li>
+
+        <li>
+            <a href="./blog.html" id="blog">BLOG</a>
+        </li>
+
+        <li>
+            <a href="./contact.html" id="contact">CONTACT US</a>
+        </li>
+        <a href="#" class="reg-btn mobile">DOWNLOAD APP</a>
+        <div class="blur">
+            <img src="./img/icon-blurM.svg" alt="">
+        </div>
+    </ul>
+
+    <div class="loading">
+        <div class="loading__bars">
+            <div></div>
+        </div>
+        <div class="loading__percentage">0%</div>
+    </div>
+
+    <div class="progress"></div>
+
+    <header class="header">
+
+        <div class="container">
+            <div class="header__left">
+                <a href="./index.html" class="header__logo">
+                    <img src="./img/icon-logo.svg" alt="financeFlow">
+                </a>
+                <a href="./index.html" class="header__logo hidden">
+                    <img src="./img/icon-logoM.svg" alt="financeFlow">
+                </a>
+                <ul class="header__menu">
+                    <li>
+                        <a href="./index.html" class="active" id="index">HOME</a>
+                    </li>
+                    <li>
+                        <a href="./about.html" id="about">ABOUT</a>
+                    </li>
+                    <li>
+                        <a href="./pricing.html" id="pricing">PRICING</a>
+                    </li>
+                    <li>
+                        <a href="./tokens.html" id="tokens">TOKEN</a>
+                    </li>
+                    <li>
+                        <a href="./blog.html" id="blog">BLOG</a>
+                    </li>
+                    <li>
+                        <a href="./contact.html" id="contact">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+
+            <a href="https://cfdcircle.vn/" target="_blank" class="header__btn">DOWNLOAD APP</a>
+
+            <div class="header__hambur">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="blogpage">
+        <section class="blog fade">
+            <div class="container">
+                <div class="textbox row">
+                    <h1 class="heading">Blog</h1>
+                    <p class="des">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Feugiat nulla suspendisse tortor aenean dis placerat.
+                    </p>
+                </div>
+
+                <div class="news__wrapper row">
+                    <div class="news__item">
+                        <div class="news__item-img">
+                            <a href="./blog-detail.html">
+                                <img src="./img/img1-news.jpg" alt="financeFlow">
+                            </a>
+                        </div>
+
+                        <div class="news__item-content">
+                            <span class="tag">FEATURED</span>
+                            <div class="textbox">
+                                <a href="./blog-detail.html">
+                                    <h2 class="heading lv3">
+                                        Cryptocurrency Explained With Pros and Cons for Investment
+                                    </h2>
+                                </a>
+                                <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                    Scelerisque viverra donec diammeo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="news__item">
+                    <div class="news__item-img">
+                        <a href="./blog-detail.html">
+                            <img src="./img/img1-news.jpg" alt="financeFlow">
+                        </a>
+                    </div>
+
+                    <div class="news__item-content">
+                        <span class="tag">PRODUCTS</span>
+
+                        <div class="textbox">
+                            <a href="./blog-detail.html">
+                                <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                            </a>
+                            <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                Scelerisque viverra donec diammeo.
+                            </p>
+                        </div>
+
+                        <div class="user line">
+                            <img srcset="./img/img-male-2x.png 2x" alt="">
+                            <div>
+                                <span>ALEX TURNER</span>
+                                <span>AUGUST 2, 2021</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="subscribe fade">
+            <div class="container">
+                <div class="subscribe__title">
+                    <img src="./img/icon-mail.svg" alt="financeFlow">
+                    <div class="textbox">
+                        <h2 class="heading lv2">
+                            Subscribe to our crypto news weekly newsletter!
+                        </h2>
+                    </div>
+                </div>
+
+                <form action="#" class="subscribe__input" id="blog-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Enter email address" id="blogEmail">
+                        <span class="form-message"></span>
+                        <button type="submit" class="reg-btn">SUBSCRIBE</button>
+                    </div>
+                    <button type="submit" class="reg-btn outside">SUBSCRIBE</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="post fade">
+            <div class="container">
+                <div class="textbox row">
+                    <h2 class="heading lv2">Latest Posts</h2>
+                    <div class="post__options">
+                        <span class="tag active" data-option="1">All</span>
+                        <span class="tag" data-option="2">Apps</span>
+                        <span class="tag" data-option="3">Products</span>
+                        <span class="tag" data-option="4">Tutorial</span>
+                    </div>
+                </div>
+
+                <div class="post__article post__article-1 active">
+                    <div class="post__wrapper">
+                        <div class="post__wrapper-item">
+                            <div class="news__item">
+                                <div class="news__item-img">
+                                    <a href="./blog-detail.html">
+                                        <img src="./img/img3-news.jpg" alt="financeFlow">
+                                    </a>
+                                </div>
+
+                                <div class="news__item-content">
+                                    <span class="tag">PRODUCTS</span>
+
+                                    <div class="textbox">
+                                        <a href="./blog-detail.html">
+                                            <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                        </a>
+                                        <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                            Scelerisque viverra donec diammeo.
+                                        </p>
+                                    </div>
+
+                                    <div class="user line">
+                                        <img srcset="./img/img-male-2x.png 2x" alt="">
+                                        <div>
+                                            <span>ALEX TURNER</span>
+                                            <span>AUGUST 2, 2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="news__item">
+                                <div class="news__item-img">
+                                    <a href="./blog-detail.html">
+                                        <img src="./img/img2-news.jpg" alt="financeFlow">
+                                    </a>
+                                </div>
+
+                                <div class="news__item-content">
+                                    <span class="tag">PRODUCTS</span>
+
+                                    <div class="textbox">
+                                        <a href="./blog-detail.html">
+                                            <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                        </a>
+                                        <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                            Scelerisque viverra donec diammeo.
+                                        </p>
+                                    </div>
+
+                                    <div class="user line">
+                                        <img srcset="./img/img-male-2x.png 2x" alt="">
+                                        <div>
+                                            <span>ALEX TURNER</span>
+                                            <span>AUGUST 2, 2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="news__item">
+                                <div class="news__item-img">
+                                    <a href="./blog-detail.html">
+                                        <img src="./img/img4-news.jpg" alt="financeFlow">
+                                    </a>
+                                </div>
+
+                                <div class="news__item-content">
+                                    <span class="tag">PRODUCTS</span>
+
+                                    <div class="textbox">
+                                        <a href="./blog-detail.html">
+                                            <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                        </a>
+                                        <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                            Scelerisque viverra donec diammeo.
+                                        </p>
+                                    </div>
+
+                                    <div class="user line">
+                                        <img srcset="./img/img-male-2x.png 2x" alt="">
+                                        <div>
+                                            <span>ALEX TURNER</span>
+                                            <span>AUGUST 2, 2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="news__item">
+                                <div class="news__item-img">
+                                    <a href="./blog-detail.html">
+                                        <img src="./img/img5-news.jpg" alt="financeFlow">
+                                    </a>
+                                </div>
+
+                                <div class="news__item-content">
+                                    <span class="tag">PRODUCTS</span>
+
+                                    <div class="textbox">
+                                        <a href="./blog-detail.html">
+                                            <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                        </a>
+                                        <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                            Scelerisque viverra donec diammeo.
+                                        </p>
+                                    </div>
+
+                                    <div class="user line">
+                                        <img srcset="./img/img-male-2x.png 2x" alt="">
+                                        <div>
+                                            <span>ALEX TURNER</span>
+                                            <span>AUGUST 2, 2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="news__item">
+                                <div class="news__item-img">
+                                    <a href="./blog-detail.html">
+                                        <img src="./img/img6-news.jpg" alt="financeFlow">
+                                    </a>
+                                </div>
+
+                                <div class="news__item-content">
+                                    <span class="tag">PRODUCTS</span>
+
+                                    <div class="textbox">
+                                        <a href="./blog-detail.html">
+                                            <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                        </a>
+                                        <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                            Scelerisque viverra donec diammeo.
+                                        </p>
+                                    </div>
+
+                                    <div class="user line">
+                                        <img srcset="./img/img-male-2x.png 2x" alt="">
+                                        <div>
+                                            <span>ALEX TURNER</span>
+                                            <span>AUGUST 2, 2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="news__item">
+                                <div class="news__item-img">
+                                    <a href="./blog-detail.html">
+                                        <img src="./img/img7-news.jpg" alt="financeFlow">
+                                    </a>
+                                </div>
+
+                                <div class="news__item-content">
+                                    <span class="tag">PRODUCTS</span>
+
+                                    <div class="textbox">
+                                        <a href="./blog-detail.html">
+                                            <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                        </a>
+                                        <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                            Scelerisque viverra donec diammeo.
+                                        </p>
+                                    </div>
+
+                                    <div class="user line">
+                                        <img srcset="./img/img-male-2x.png 2x" alt="">
+                                        <div>
+                                            <span>ALEX TURNER</span>
+                                            <span>AUGUST 2, 2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="post__wrapper-item">
+                            <div class="news__item">
+                                <div class="news__item-img">
+                                    <a href="#">
+                                        <img src="./img/img3-news.jpg" alt="financeFlow">
+                                    </a>
+                                </div>
+
+                                <div class="news__item-content">
+                                    <span class="tag">APPS</span>
+
+                                    <div class="textbox">
+                                        <a href="">
+                                            <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                        </a>
+                                        <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                            Scelerisque viverra donec diammeo.
+                                        </p>
+                                    </div>
+
+                                    <div class="user line">
+                                        <img srcset="./img/img-shortHairFemale.png 2x" alt="">
+                                        <div>
+                                            <span>ALEX TURNER</span>
+                                            <span>AUGUST 2, 2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="news__item">
+                                <div class="news__item-img">
+                                    <a href="#">
+                                        <img src="./img/img2-news.jpg" alt="financeFlow">
+                                    </a>
+                                </div>
+
+                                <div class="news__item-content">
+                                    <span class="tag">APPS</span>
+
+                                    <div class="textbox">
+                                        <a href="">
+                                            <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                        </a>
+                                        <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                            Scelerisque viverra donec diammeo.
+                                        </p>
+                                    </div>
+
+                                    <div class="user line">
+                                        <img srcset="./img/img-shortHairFemale.png 2x" alt="">
+                                        <div>
+                                            <span>ALEX TURNER</span>
+                                            <span>AUGUST 2, 2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="news__item">
+                                <div class="news__item-img">
+                                    <a href="#">
+                                        <img src="./img/img4-news.jpg" alt="financeFlow">
+                                    </a>
+                                </div>
+
+                                <div class="news__item-content">
+                                    <span class="tag">APPS</span>
+
+                                    <div class="textbox">
+                                        <a href="">
+                                            <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                        </a>
+                                        <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                            Scelerisque viverra donec diammeo.
+                                        </p>
+                                    </div>
+
+                                    <div class="user line">
+                                        <img srcset="./img/img-shortHairFemale.png 2x" alt="">
+                                        <div>
+                                            <span>ALEX TURNER</span>
+                                            <span>AUGUST 2, 2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="news__item">
+                                <div class="news__item-img">
+                                    <a href="#">
+                                        <img src="./img/img5-news.jpg" alt="financeFlow">
+                                    </a>
+                                </div>
+
+                                <div class="news__item-content">
+                                    <span class="tag">APPS</span>
+
+                                    <div class="textbox">
+                                        <a href="">
+                                            <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                        </a>
+                                        <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                            Scelerisque viverra donec diammeo.
+                                        </p>
+                                    </div>
+
+                                    <div class="user line">
+                                        <img srcset="./img/img-shortHairFemale.png 2x" alt="">
+                                        <div>
+                                            <span>ALEX TURNER</span>
+                                            <span>AUGUST 2, 2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="news__item">
+                                <div class="news__item-img">
+                                    <a href="#">
+                                        <img src="./img/img6-news.jpg" alt="financeFlow">
+                                    </a>
+                                </div>
+
+                                <div class="news__item-content">
+                                    <span class="tag">APPS</span>
+
+                                    <div class="textbox">
+                                        <a href="">
+                                            <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                        </a>
+                                        <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                            Scelerisque viverra donec diammeo.
+                                        </p>
+                                    </div>
+
+                                    <div class="user line">
+                                        <img srcset="./img/img-shortHairFemale.png 2x" alt="">
+                                        <div>
+                                            <span>ALEX TURNER</span>
+                                            <span>AUGUST 2, 2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="news__item">
+                                <div class="news__item-img">
+                                    <a href="#">
+                                        <img src="./img/img7-news.jpg" alt="financeFlow">
+                                    </a>
+                                </div>
+
+                                <div class="news__item-content">
+                                    <span class="tag">APPS</span>
+
+                                    <div class="textbox">
+                                        <a href="">
+                                            <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                        </a>
+                                        <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                            Scelerisque viverra donec diammeo.
+                                        </p>
+                                    </div>
+
+                                    <div class="user line">
+                                        <img srcset="./img/img-shortHairFemale.png 2x" alt="">
+                                        <div>
+                                            <span>ALEX TURNER</span>
+                                            <span>AUGUST 2, 2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="post__wrapper-item">
+                            <div class="news__item">
+                                <div class="news__item-img">
+                                    <a href="#">
+                                        <img src="./img/img3-news.jpg" alt="financeFlow">
+                                    </a>
+                                </div>
+
+                                <div class="news__item-content">
+                                    <span class="tag">TUTORIAL</span>
+
+                                    <div class="textbox">
+                                        <a href="">
+                                            <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                        </a>
+                                        <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                            Scelerisque viverra donec diammeo.
+                                        </p>
+                                    </div>
+
+                                    <div class="user line">
+                                        <img srcset="./img/img-longHairFemale.png 2x" alt="">
+                                        <div>
+                                            <span>ALEX TURNER</span>
+                                            <span>AUGUST 2, 2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="news__item">
+                                <div class="news__item-img">
+                                    <a href="#">
+                                        <img src="./img/img2-news.jpg" alt="financeFlow">
+                                    </a>
+                                </div>
+
+                                <div class="news__item-content">
+                                    <span class="tag">TUTORIAL</span>
+
+                                    <div class="textbox">
+                                        <a href="">
+                                            <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                        </a>
+                                        <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                            Scelerisque viverra donec diammeo.
+                                        </p>
+                                    </div>
+
+                                    <div class="user line">
+                                        <img srcset="./img/img-longHairFemale.png 2x" alt="">
+                                        <div>
+                                            <span>ALEX TURNER</span>
+                                            <span>AUGUST 2, 2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="news__item">
+                                <div class="news__item-img">
+                                    <a href="#">
+                                        <img src="./img/img4-news.jpg" alt="financeFlow">
+                                    </a>
+                                </div>
+
+                                <div class="news__item-content">
+                                    <span class="tag">TUTORIAL</span>
+
+                                    <div class="textbox">
+                                        <a href="">
+                                            <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                        </a>
+                                        <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                            Scelerisque viverra donec diammeo.
+                                        </p>
+                                    </div>
+
+                                    <div class="user line">
+                                        <img srcset="./img/img-longHairFemale.png 2x" alt="">
+                                        <div>
+                                            <span>ALEX TURNER</span>
+                                            <span>AUGUST 2, 2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="news__item">
+                                <div class="news__item-img">
+                                    <a href="#">
+                                        <img src="./img/img5-news.jpg" alt="financeFlow">
+                                    </a>
+                                </div>
+
+                                <div class="news__item-content">
+                                    <span class="tag">TUTORIAL</span>
+
+                                    <div class="textbox">
+                                        <a href="">
+                                            <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                        </a>
+                                        <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                            Scelerisque viverra donec diammeo.
+                                        </p>
+                                    </div>
+
+                                    <div class="user line">
+                                        <img srcset="./img/img-longHairFemale.png 2x" alt="">
+                                        <div>
+                                            <span>ALEX TURNER</span>
+                                            <span>AUGUST 2, 2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="news__item">
+                                <div class="news__item-img">
+                                    <a href="#">
+                                        <img src="./img/img6-news.jpg" alt="financeFlow">
+                                    </a>
+                                </div>
+
+                                <div class="news__item-content">
+                                    <span class="tag">TUTORIAL</span>
+
+                                    <div class="textbox">
+                                        <a href="">
+                                            <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                        </a>
+                                        <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                            Scelerisque viverra donec diammeo.
+                                        </p>
+                                    </div>
+
+                                    <div class="user line">
+                                        <img srcset="./img/img-longHairFemale.png 2x" alt="">
+                                        <div>
+                                            <span>ALEX TURNER</span>
+                                            <span>AUGUST 2, 2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="news__item">
+                                <div class="news__item-img">
+                                    <a href="#">
+                                        <img src="./img/img7-news.jpg" alt="financeFlow">
+                                    </a>
+                                </div>
+
+                                <div class="news__item-content">
+                                    <span class="tag">TUTORIAL</span>
+
+                                    <div class="textbox">
+                                        <a href="">
+                                            <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                        </a>
+                                        <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                            Scelerisque viverra donec diammeo.
+                                        </p>
+                                    </div>
+
+                                    <div class="user line">
+                                        <img srcset="./img/img-longHairFemale.png 2x" alt="">
+                                        <div>
+                                            <span>ALEX TURNER</span>
+                                            <span>AUGUST 2, 2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="button-row">
+                        <div class="button button--previous" id="prevBtn">
+                            <svg width="9" height="13" viewBox="0 0 9 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 1L2 6.5L7.5 12" stroke="white" stroke-opacity="1" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg>
+
+                        </div>
+
+                        <div class="button-group button-group--cells">
+                            <div class="button is-selected">1</div>
+                            <div class="button">2</div>
+                            <div class="button">3</div>
+                        </div>
+
+                        <div class="button button--next" id="nextBtn">
+                            <svg width="9" height="13" viewBox="0 0 9 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 1L2 6.5L7.5 12" stroke="white" stroke-opacity="1" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post__article post__article-2">
+                    <div class="post__wrapper-item initial">
+                        <div class="news__item">
+                            <div class="news__item-img">
+                                <a href="./blog-detail.html">
+                                    <img src="./img/img7-news.jpg" alt="financeFlow">
+                                </a>
+                            </div>
+
+                            <div class="news__item-content">
+                                <span class="tag">APPS</span>
+
+                                <div class="textbox">
+                                    <a href="./blog-detail.html">
+                                        <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                    </a>
+                                    <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                        Scelerisque viverra donec diammeo.
+                                    </p>
+                                </div>
+
+                                <div class="user line">
+                                    <img srcset="./img/img-shortHairFemale.png 2x" alt="">
+                                    <div>
+                                        <span>ALEX TURNER</span>
+                                        <span>AUGUST 2, 2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="news__item">
+                            <div class="news__item-img">
+                                <a href="./blog-detail.html">
+                                    <img src="./img/img5-news.jpg" alt="financeFlow">
+                                </a>
+                            </div>
+
+                            <div class="news__item-content">
+                                <span class="tag">APPS</span>
+
+                                <div class="textbox">
+                                    <a href="./blog-detail.html">
+                                        <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                    </a>
+                                    <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                        Scelerisque viverra donec diammeo.
+                                    </p>
+                                </div>
+
+                                <div class="user line">
+                                    <img srcset="./img/img-shortHairFemale.png 2x" alt="">
+                                    <div>
+                                        <span>ALEX TURNER</span>
+                                        <span>AUGUST 2, 2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="news__item">
+                            <div class="news__item-img">
+                                <a href="./blog-detail.html">
+                                    <img src="./img/img3-news.jpg" alt="financeFlow">
+                                </a>
+                            </div>
+
+                            <div class="news__item-content">
+                                <span class="tag">APPS</span>
+
+                                <div class="textbox">
+                                    <a href="./blog-detail.html">
+                                        <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                    </a>
+                                    <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                        Scelerisque viverra donec diammeo.
+                                    </p>
+                                </div>
+
+                                <div class="user line">
+                                    <img srcset="./img/img-shortHairFemale.png 2x" alt="">
+                                    <div>
+                                        <span>ALEX TURNER</span>
+                                        <span>AUGUST 2, 2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="news__item">
+                            <div class="news__item-img">
+                                <a href="./blog-detail.html">
+                                    <img src="./img/img2-news.jpg" alt="financeFlow">
+                                </a>
+                            </div>
+
+                            <div class="news__item-content">
+                                <span class="tag">APPS</span>
+
+                                <div class="textbox">
+                                    <a href="./blog-detail.html">
+                                        <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                    </a>
+                                    <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                        Scelerisque viverra donec diammeo.
+                                    </p>
+                                </div>
+
+                                <div class="user line">
+                                    <img srcset="./img/img-shortHairFemale.png 2x" alt="">
+                                    <div>
+                                        <span>ALEX TURNER</span>
+                                        <span>AUGUST 2, 2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="news__item">
+                            <div class="news__item-img">
+                                <a href="./blog-detail.html">
+                                    <img src="./img/img4-news.jpg" alt="financeFlow">
+                                </a>
+                            </div>
+
+                            <div class="news__item-content">
+                                <span class="tag">APPS</span>
+
+                                <div class="textbox">
+                                    <a href="./blog-detail.html">
+                                        <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                    </a>
+                                    <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                        Scelerisque viverra donec diammeo.
+                                    </p>
+                                </div>
+
+                                <div class="user line">
+                                    <img srcset="./img/img-shortHairFemale.png 2x" alt="">
+                                    <div>
+                                        <span>ALEX TURNER</span>
+                                        <span>AUGUST 2, 2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="news__item">
+                            <div class="news__item-img">
+                                <a href="./blog-detail.html">
+                                    <img src="./img/img6-news.jpg" alt="financeFlow">
+                                </a>
+                            </div>
+
+                            <div class="news__item-content">
+                                <span class="tag">APPS</span>
+
+                                <div class="textbox">
+                                    <a href="./blog-detail.html">
+                                        <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                    </a>
+                                    <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                        Scelerisque viverra donec diammeo.
+                                    </p>
+                                </div>
+
+                                <div class="user line">
+                                    <img srcset="./img/img-shortHairFemale.png 2x" alt="">
+                                    <div>
+                                        <span>ALEX TURNER</span>
+                                        <span>AUGUST 2, 2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post__article post__article-3">
+                    <div class="post__wrapper-item initial">
+                        <div class="news__item">
+                            <div class="news__item-img">
+                                <a href="./blog-detail.html">
+                                    <img src="./img/img5-news.jpg" alt="financeFlow">
+                                </a>
+                            </div>
+
+                            <div class="news__item-content">
+                                <span class="tag">PRODUCTS</span>
+
+                                <div class="textbox">
+                                    <a href="./blog-detail.html">
+                                        <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                    </a>
+                                    <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                        Scelerisque viverra donec diammeo.
+                                    </p>
+                                </div>
+
+                                <div class="user line">
+                                    <img srcset="./img/img-male-2x.png 2x" alt="">
+                                    <div>
+                                        <span>ALEX TURNER</span>
+                                        <span>AUGUST 2, 2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="news__item">
+                            <div class="news__item-img">
+                                <a href="./blog-detail.html">
+                                    <img src="./img/img6-news.jpg" alt="financeFlow">
+                                </a>
+                            </div>
+
+                            <div class="news__item-content">
+                                <span class="tag">PRODUCTS</span>
+
+                                <div class="textbox">
+                                    <a href="./blog-detail.html">
+                                        <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                    </a>
+                                    <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                        Scelerisque viverra donec diammeo.
+                                    </p>
+                                </div>
+
+                                <div class="user line">
+                                    <img srcset="./img/img-male-2x.png 2x" alt="">
+                                    <div>
+                                        <span>ALEX TURNER</span>
+                                        <span>AUGUST 2, 2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="news__item">
+                            <div class="news__item-img">
+                                <a href="./blog-detail.html">
+                                    <img src="./img/img7-news.jpg" alt="financeFlow">
+                                </a>
+                            </div>
+
+                            <div class="news__item-content">
+                                <span class="tag">PRODUCTS</span>
+
+                                <div class="textbox">
+                                    <a href="./blog-detail.html">
+                                        <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                    </a>
+                                    <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                        Scelerisque viverra donec diammeo.
+                                    </p>
+                                </div>
+
+                                <div class="user line">
+                                    <img srcset="./img/img-male-2x.png 2x" alt="">
+                                    <div>
+                                        <span>ALEX TURNER</span>
+                                        <span>AUGUST 2, 2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="news__item">
+                            <div class="news__item-img">
+                                <a href="./blog-detail.html">
+                                    <img src="./img/img3-news.jpg" alt="financeFlow">
+                                </a>
+                            </div>
+
+                            <div class="news__item-content">
+                                <span class="tag">PRODUCTS</span>
+
+                                <div class="textbox">
+                                    <a href="./blog-detail.html">
+                                        <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                    </a>
+                                    <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                        Scelerisque viverra donec diammeo.
+                                    </p>
+                                </div>
+
+                                <div class="user line">
+                                    <img srcset="./img/img-male-2x.png 2x" alt="">
+                                    <div>
+                                        <span>ALEX TURNER</span>
+                                        <span>AUGUST 2, 2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="news__item">
+                            <div class="news__item-img">
+                                <a href="./blog-detail.html">
+                                    <img src="./img/img2-news.jpg" alt="financeFlow">
+                                </a>
+                            </div>
+
+                            <div class="news__item-content">
+                                <span class="tag">PRODUCTS</span>
+
+                                <div class="textbox">
+                                    <a href="./blog-detail.html">
+                                        <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                    </a>
+                                    <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                        Scelerisque viverra donec diammeo.
+                                    </p>
+                                </div>
+
+                                <div class="user line">
+                                    <img srcset="./img/img-male-2x.png 2x" alt="">
+                                    <div>
+                                        <span>ALEX TURNER</span>
+                                        <span>AUGUST 2, 2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="news__item">
+                            <div class="news__item-img">
+                                <a href="./blog-detail.html">
+                                    <img src="./img/img4-news.jpg" alt="financeFlow">
+                                </a>
+                            </div>
+
+                            <div class="news__item-content">
+                                <span class="tag">PRODUCTS</span>
+
+                                <div class="textbox">
+                                    <a href="./blog-detail.html">
+                                        <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                    </a>
+                                    <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                        Scelerisque viverra donec diammeo.
+                                    </p>
+                                </div>
+
+                                <div class="user line">
+                                    <img srcset="./img/img-male-2x.png 2x" alt="">
+                                    <div>
+                                        <span>ALEX TURNER</span>
+                                        <span>AUGUST 2, 2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post__article post__article-4">
+                    <div class="post__wrapper-item initial">
+                        <div class="news__item">
+                            <div class="news__item-img">
+                                <a href="./blog-detail.html">
+                                    <img src="./img/img3-news.jpg" alt="financeFlow">
+                                </a>
+                            </div>
+
+                            <div class="news__item-content">
+                                <span class="tag">TUTORIAL</span>
+
+                                <div class="textbox">
+                                    <a href="./blog-detail.html">
+                                        <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                    </a>
+                                    <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                        Scelerisque viverra donec diammeo.
+                                    </p>
+                                </div>
+
+                                <div class="user line">
+                                    <img srcset="./img/img-longHairFemale.png 2x" alt="">
+                                    <div>
+                                        <span>ALEX TURNER</span>
+                                        <span>AUGUST 2, 2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="news__item">
+                            <div class="news__item-img">
+                                <a href="./blog-detail.html">
+                                    <img src="./img/img2-news.jpg" alt="financeFlow">
+                                </a>
+                            </div>
+
+                            <div class="news__item-content">
+                                <span class="tag">TUTORIAL</span>
+
+                                <div class="textbox">
+                                    <a href="./blog-detail.html">
+                                        <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                    </a>
+                                    <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                        Scelerisque viverra donec diammeo.
+                                    </p>
+                                </div>
+
+                                <div class="user line">
+                                    <img srcset="./img/img-longHairFemale.png 2x" alt="">
+                                    <div>
+                                        <span>ALEX TURNER</span>
+                                        <span>AUGUST 2, 2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="news__item">
+                            <div class="news__item-img">
+                                <a href="./blog-detail.html">
+                                    <img src="./img/img4-news.jpg" alt="financeFlow">
+                                </a>
+                            </div>
+
+                            <div class="news__item-content">
+                                <span class="tag">TUTORIAL</span>
+
+                                <div class="textbox">
+                                    <a href="./blog-detail.html">
+                                        <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                    </a>
+                                    <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                        Scelerisque viverra donec diammeo.
+                                    </p>
+                                </div>
+
+                                <div class="user line">
+                                    <img srcset="./img/img-longHairFemale.png 2x" alt="">
+                                    <div>
+                                        <span>ALEX TURNER</span>
+                                        <span>AUGUST 2, 2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="news__item">
+                            <div class="news__item-img">
+                                <a href="./blog-detail.html">
+                                    <img src="./img/img5-news.jpg" alt="financeFlow">
+                                </a>
+                            </div>
+
+                            <div class="news__item-content">
+                                <span class="tag">TUTORIAL</span>
+
+                                <div class="textbox">
+                                    <a href="./blog-detail.html">
+                                        <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                    </a>
+                                    <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                        Scelerisque viverra donec diammeo.
+                                    </p>
+                                </div>
+
+                                <div class="user line">
+                                    <img srcset="./img/img-longHairFemale.png 2x" alt="">
+                                    <div>
+                                        <span>ALEX TURNER</span>
+                                        <span>AUGUST 2, 2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="news__item">
+                            <div class="news__item-img">
+                                <a href="./blog-detail.html">
+                                    <img src="./img/img6-news.jpg" alt="financeFlow">
+                                </a>
+                            </div>
+
+                            <div class="news__item-content">
+                                <span class="tag">TUTORIAL</span>
+
+                                <div class="textbox">
+                                    <a href="./blog-detail.html">
+                                        <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                    </a>
+                                    <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                        Scelerisque viverra donec diammeo.
+                                    </p>
+                                </div>
+
+                                <div class="user line">
+                                    <img srcset="./img/img-longHairFemale.png 2x" alt="">
+                                    <div>
+                                        <span>ALEX TURNER</span>
+                                        <span>AUGUST 2, 2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="news__item">
+                            <div class="news__item-img">
+                                <a href="./blog-detail.html">
+                                    <img src="./img/img7-news.jpg" alt="financeFlow">
+                                </a>
+                            </div>
+
+                            <div class="news__item-content">
+                                <span class="tag">TUTORIAL</span>
+
+                                <div class="textbox">
+                                    <a href="./blog-detail.html">
+                                        <h3 class="heading lv3">The Basics about Cryptocurrency</h3>
+                                    </a>
+                                    <p class="des">Lorem ipsum dolor sit ametero irseo, consectetur adipiscing elit.
+                                        Scelerisque viverra donec diammeo.
+                                    </p>
+                                </div>
+
+                                <div class="user line">
+                                    <img srcset="./img/img-longHairFemale.png 2x" alt="">
+                                    <div>
+                                        <span>ALEX TURNER</span>
+                                        <span>AUGUST 2, 2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <a href="./" class="footer__logo">
+                    <img src="./img/icon-logo.svg" alt="financeFlow">
+                </a>
+
+                <div class="sns">
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="./img/icon-instagram.svg" alt="financeFlow">
+                    </a>
+
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img src="./img/icon-facebook.svg" alt="financeFlow">
+                    </a>
+
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        <img src="./img/icon-linkedIn.svg" alt="financeFlow">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__mid">
+                <div class="footer__menu">
+                    <span class="menu">MENU</span>
+                    <div class="footer__menu-wrapper">
+                        <div>
+                            <a href="./">HOME</a>
+                            <a href="./about.html">ABOUT</a>
+                            <a href="./pricing.html">PRICING</a>
+                        </div>
+
+                        <div>
+                            <a href="./tokens.html">TOKENS</a>
+                            <a href="./blog.html">BLOG</a>
+                            <a href="./contact.html">CONTACT US</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__download">
+                    <div class="textbox">
+                        <h2 class="heading label">DOWNLOAD OUR APPLICATION</h2>
+                        <p class="des">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Mauris sed nulla integer
+                        </p>
+                    </div>
+                    <div class="reg-btn__wrapper">
+                        <a href="https://www.apple.com/vn/app-store/" target="_blank" class="reg-btn">
+                            <img src="./img/icon-apple.svg" alt="">
+                            APP STORE
+                        </a>
+
+                        <a href="https://play.google.com/store/games" target="_blank" class="reg-btn">
+                            <img src="./img/icon-playStore.svg" alt="">
+                            PLAY STORE
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bot">
+                <span class="copyright">© 2023 CFD Circle, Inc.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./dest/jsmain.min.js"></script>
+    <script src="./dest/main.js"></script>
+</body>
